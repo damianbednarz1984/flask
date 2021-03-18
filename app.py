@@ -26,7 +26,7 @@ def add():
   mysql.connection.commit()
 
   return '{"Result":"Success"}'
-  @app.route("/update") #Add Student
+@app.route("/update") #Add Student
 def update():
   name = request.args.get('name')
   email = request.args.get('email')
