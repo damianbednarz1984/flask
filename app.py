@@ -36,6 +36,15 @@ def update():
   #mysql.connection.commit()
 
   return '{"Result":"not done"}'
+def delete():
+  id2 = request.args.get('id')
+  cur = mysql.connection.cursor() 
+<<HEAD
+  s="delete from students where studentID ='%s" %id2
+  cur.execute(s)
+  mysql.connection.commit()
+
+  return '{"Result":"Success"}'
 
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
