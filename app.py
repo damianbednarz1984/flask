@@ -35,7 +35,7 @@ def update():
   print(name)
   print(email)
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''Update student SET studentName = '%s', email='%s' WHERE studentID ='%s'''(name,email,id2)
+  s='''UPDATE student SET studentName = '%s', email='%s' WHERE studentID ='%s'''(name,email,id2)
   print(s)
   cur.execute(s)
   mysql.connection.commit()
@@ -45,7 +45,7 @@ def update():
 def delete():
   id2 = request.args.get('id')
   cur = mysql.connection.cursor() 
-  s='''delete from students where studentID =%s''' % id2
+  s='''DELETE FROM students where studentID =%s''' % id2
   cur.execute(s)
   mysql.connection.commit()
 
