@@ -35,11 +35,11 @@ def update():
   print(name)
   print(email)
   cur = mysql.connection.cursor() #create a connection to the SQL instance
-  s='''UPDATE students SET studentName = '%s', email='%s' WHERE studentID ='%s'''(name,email,id2)
+  s ='''UPDATE students SET studentName = '%s', email='%s' WHERE studentID ='%s'''(name,email,id2)
   print(s)
   cur.execute(s)
   mysql.connection.commit()
-  return '{"Result":"Successfully updated"}'
+  return '{"Result:Successfully updated"}'
 
  
 def delete():
