@@ -41,7 +41,7 @@ def update():
   mysql.connection.commit()
   return '{"Result:Successfully updated"}'
 
- 
+@app.route("/delete")
 def delete():
   id2 = request.args.get('id')
   cur = mysql.connection.cursor() 
