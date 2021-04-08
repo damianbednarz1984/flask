@@ -44,19 +44,12 @@ def update():
 def delete():
   id2 = request.args.get('id')
   cur = mysql.connection.cursor() 
-<<<<<<< HEAD
-  s="DELETE FROM students where studentID=' %s'" % id2
-  cur.execute(s)
-  mysql.connection.commit()
 
-  return '{"Result":"User Deleted"}'
-
-=======
   s="DELETE FROM students where studentID = '%s'" %id2
   cur.execute(s)
   mysql.connection.commit()
   return '{"Result":"Success"}'
->>>>>>> ebd058b7fafda5cf75fd0818efbdc6fb00b1d9e8
+
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.connection.cursor() #create a connection to the SQL instance
