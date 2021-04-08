@@ -35,7 +35,7 @@ def update():
   print(email)
   cur = mysql.connection.cursor() #create a connection to the SQL instance
   s ='''UPDATE students SET studentName = '%s', email='%s' WHERE studentID =%s'''%(name,email,id2)
->>>>>>> ebd058b7fafda5cf75fd0818efbdc6fb00b1d9e8
+
   print(s)
   cur.execute(s)
   mysql.connection.commit()
